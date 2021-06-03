@@ -5,14 +5,16 @@ export const Grid = styled.div`
   width: 100vw;
   height: 100vh;
   display: grid;
-  ${media.lessThan('320px')`
-    grid-template-areas: 'navbar' 'banner' 'main';
-    grid-template-rows: 52px 320px auto;
+  grid-template-areas: 'navbar' 'banner' 'main';
+  grid-template-rows: 52px 320px auto;
+  ${media.greaterThan('640px')`
+    grid-template-rows: 52px 400px auto;
   `}
 `;
 
 export const Navbar = styled.section`
   grid-area: navbar;
+  padding: 8px 16px;
   background-color: #fff;
 `;
 

@@ -1,4 +1,5 @@
-export const flattenMessages = (nestedMessages, prefix = '') => {
+/* eslint-disable */
+export const flattenMessages = (nestedMessages, prefix = '') =>
   Object.keys(nestedMessages).reduce((messages, key) => {
     const value = nestedMessages[key];
 
@@ -11,4 +12,3 @@ export const flattenMessages = (nestedMessages, prefix = '') => {
 
     return Object.assign(messages, flattenMessage);
   }, {});
-};

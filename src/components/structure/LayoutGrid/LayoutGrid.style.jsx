@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import media from 'styled-media-query';
 
 export const Grid = styled.div`
@@ -16,11 +16,4 @@ export const Navbar = styled.section`
   grid-area: navbar;
   padding: 8px 16px;
   background-color: #fff;
-`;
-
-export const Banner = styled.section`
-  grid-area: banner;
-  ${({ theme: { colors } }) => css`
-    background-color: ${colors.blue.dark};
-  `}
 `;

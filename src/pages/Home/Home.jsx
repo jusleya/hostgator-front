@@ -1,5 +1,5 @@
 import React from 'react';
-import LayoutGrid from '../../components/structure/LayoutGrid';
+import { LayoutGrid } from '../../components/structure';
 
 const HomePage = () => <LayoutGrid>Home</LayoutGrid>;
 

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
 
 export const Grid = styled.div`
@@ -15,5 +15,7 @@ export const Grid = styled.div`
 export const Navbar = styled.section`
   grid-area: navbar;
   padding: 8px 16px;
-  background-color: #fff;
+  ${({ theme: { colors } }) => css`
+    background-color: ${colors.auxiliary.white};
+  `}
 `;

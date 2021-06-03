@@ -1,5 +1,9 @@
 {
   "banner": {
-    "subtitle": "Hospedagem de Sites"
+    "title": "Tenha uma hospedagem de sites estável e evite perder",
+    "subtitle": "Hospedagem de Sites",
+    "advantage": {
+      "available": "99,9% de disponibilidade: seu site sempre no ar"
+    }
   }
 }

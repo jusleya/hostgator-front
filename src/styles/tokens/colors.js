@@ -5,9 +5,10 @@ export const colors = {
     light: '#B9D0EF',
     lightest: '#F1F6FB',
   },
-  auxialiary: {
+  auxiliary: {
     black: '#333',
     green: '#51C99C',
     orange: '#FF6A17',
+    white: '#fff',
   },
 };

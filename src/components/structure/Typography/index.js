@@ -1,3 +1,4 @@
+/* eslint-disable */
 import styled, { css } from 'styled-components';
 
 export const Title = styled.h1`
@@ -13,15 +14,17 @@ export const Title = styled.h1`
 `;
 
 export const Subtitle = styled.h3.attrs(
-  ({ lineHeight, fontWeigth, letteSpacing }) => ({
-    lineHeight: lineHeight ?? '27px',
+  ({ lineHeight, fontWeigth, letteSpacing, width }) => ({
+    width: width ?? 'auto',
     fontWeigth: fontWeigth ?? 600,
+    lineHeight: lineHeight ?? '27px',
     letteSpacing: letteSpacing ?? '0px',
   }),
 )`
   ${({ theme }) => css`
     font-size: 16px;
     text-align: center;
+    width: ${({ width }) => width};
     color: ${theme.colors.blue.light};
     font-weight: ${({ fontWeigth }) => fontWeigth};
     line-height: ${({ lineHeight }) => lineHeight};

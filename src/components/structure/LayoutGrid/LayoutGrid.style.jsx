@@ -5,8 +5,8 @@ export const Grid = styled.div`
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-areas: 'navbar' 'banner' 'main';
-  grid-template-rows: 52px 320px auto;
+  grid-template-areas: 'navbar navbar navbar' 'banner banner banner' '. main .';
+  grid-template-rows: 52px 380px auto;
   ${media.greaterThan('640px')`
     grid-template-rows: 52px 400px auto;
   `}

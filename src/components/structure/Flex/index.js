@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+/* eslint-disable */
+import styled, { css } from 'styled-components';
 
 export const Flex = styled.div.attrs(
   ({
@@ -12,6 +13,7 @@ export const Flex = styled.div.attrs(
     marginLeft,
     marginRight,
     marginBottom,
+    spaceBetween,
     justifyContent,
   }) => ({
     padding: padding ?? 0,
@@ -20,6 +22,7 @@ export const Flex = styled.div.attrs(
     direction: direction ?? 'row',
     flexWrap: flexWrap ?? 'unset',
     marginBottom: marginBottom ?? 0,
+    spaceBetween: spaceBetween ?? 0,
     marginTop: marginTop ?? 'unset',
     marginLeft: marginLeft ?? 'unset',
     marginRight: marginRight ?? 'unset',
@@ -40,4 +43,28 @@ export const Flex = styled.div.attrs(
   ${({ margin }) => margin && `margin: ${margin};`};
   margin-bottom: ${({ marginBottom }) => marginBottom};
   justify-content: ${({ justifyContent }) => justifyContent};
+  ${({ spaceBetween, direction }) =>
+    direction === 'column'
+      ? css`
+          > :nth-child(n):not(:last-child) {
+            margin-bottom: ${spaceBetween};
+          }
+        `
+      : direction === 'row-reverse'
+      ? css`
+          > :nth-child(n):not(:last-child) {
+            margin-left: ${spaceBetween};
+          }
+        `
+      : direction === 'column-reverse'
+      ? css`
+          > :nth-child(n):not(:last-child) {
+            margin-top: ${spaceBetween};
+          }
+        `
+      : css`
+          > :nth-child(n):not(:last-child) {
+            margin-right: ${spaceBetween};
+          }
+        `}
 `;

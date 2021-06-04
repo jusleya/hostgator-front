@@ -31,3 +31,20 @@ export const Navbar = styled.section`
     grid-template-columns: 390px auto 390px;
   `}
 `;
+
+export const Main = styled.section`
+  display: grid;
+  grid-area: main;
+  margin-top: 32px;
+  grid-template-areas: '. content .';
+  grid-template-columns: 15px auto 15px;
+  div {
+    grid-area: content;
+    ${media.between('640px', '1024px')`
+    grid-template-columns: 27px auto 27px;
+  `}
+    ${media.greaterThan('1024px')`
+    grid-template-columns: 390px auto 390px;
+  `}
+  }
+`;

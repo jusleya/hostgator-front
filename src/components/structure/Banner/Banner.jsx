@@ -13,7 +13,7 @@ const Banner = () => {
         <Subtitle letteSpacing="1.6px">
           {formatMessage({ id: 'banner.subtitle' })}
         </Subtitle>
-        <Title mb="33px" mt="12px">
+        <Title mb="33px" mt="12px" modifiers={['center']}>
           {formatMessage({ id: 'banner.title' })}
         </Title>
         <Flex direction="column" spaceBetween="7px" alignItems="center">

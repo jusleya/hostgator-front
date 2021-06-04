@@ -11,7 +11,9 @@ const LayoutGrid = ({ children }) => (
       <IcLogo />
     </S.Navbar>
     <Banner />
-    <div>{children}</div>
+    <S.Main>
+      <div>{children}</div>
+    </S.Main>
   </S.Grid>
 );
 

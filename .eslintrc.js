@@ -5,9 +5,7 @@ module.exports = {
   },
   extends: ['plugin:react/recommended', 'prettier', 'airbnb'],
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
+    ecmaFeatures: { jsx: true },
     ecmaVersion: 12,
     sourceType: 'module',
   },
@@ -24,10 +22,6 @@ module.exports = {
     ],
   },
   settings: {
-    'import/resolver': {
-      node: {
-        moduleDirectory: ['node_modules', 'src/'],
-      },
-    },
+    'import/resolver': { node: { moduleDirectory: ['node_modules', 'src/'] } },
   },
 };

@@ -10,5 +10,6 @@ export const colors = {
     green: '#51C99C',
     orange: '#FF6A17',
     white: '#fff',
+    gray: '#DFECFF',
   },
 };

@@ -1,33 +1,60 @@
-/* eslint-disable */
 import styled, { css } from 'styled-components';
+import { applyStyleModifiers } from 'styled-components-modifiers';
 
-export const Title = styled.h1`
-  ${({ theme, mt, mb }) => css`
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 32px;
-    margin-top: ${mt};
-    text-align: center;
-    margin-bottom: ${mb};
-    color: ${theme.colors.auxiliary.white};
+const MODIFIER_CONFIG = {
+  blue: ({ theme }) => `
+    color: ${theme.colors.blue.dark};
+  `,
+  center: () => 'text-align: center;',
+  bold: () => 'font-weight: bold',
+  normal: () => 'font-weight: normal',
+  lineDecoration: () => 'text-decoration: line-through;',
+};
+
+export const Text = styled.h4`
+  font-size: 13px;
+  line-height: 19px;
+  
+  ${({ theme: { colors } }) => css`
+    color: ${colors.auxiliary.black};
   `}
+  ${applyStyleModifiers(MODIFIER_CONFIG)};
 `;
 
-export const Subtitle = styled.h3.attrs(
-  ({ lineHeight, fontWeigth, letteSpacing, width }) => ({
-    width: width ?? 'auto',
-    fontWeigth: fontWeigth ?? 600,
-    lineHeight: lineHeight ?? '27px',
-    letteSpacing: letteSpacing ?? '0px',
-  }),
-)`
-  ${({ theme }) => css`
-    font-size: 16px;
-    text-align: center;
-    width: ${({ width }) => width};
-    color: ${theme.colors.blue.light};
-    font-weight: ${({ fontWeigth }) => fontWeigth};
-    line-height: ${({ lineHeight }) => lineHeight};
-    letter-spacing: ${({ letteSpacing }) => letteSpacing};
+export const Title = styled.h1.attrs(({ size, mb, mt }) => ({
+  mb: mb ?? 0,
+  mt: mt ?? 0,
+  size: size ?? '24px',
+}))`
+  font-weight: bold;
+  line-height: 32px;
+  margin-top: ${({ mt }) => mt};
+  font-size: ${({ size }) => size};
+  margin-bottom: ${({ mb }) => mb};
+  ${({ theme: { colors } }) => css`
+    color: ${colors.auxiliary.white};
+  `}
+  ${applyStyleModifiers(MODIFIER_CONFIG)};
+`;
+
+export const Subtitle = styled.h3.attrs(({
+  width,
+  lineHeight,
+  fontWeigth,
+  letteSpacing,
+}) => ({
+  width: width ?? 'auto',
+  fontWeigth: fontWeigth ?? 600,
+  lineHeight: lineHeight ?? '27px',
+  letteSpacing: letteSpacing ?? '0px',
+}))`
+  font-size: 16px;
+  text-align: center;
+  width: ${({ width }) => width};
+  font-weight: ${({ fontWeigth }) => fontWeigth};
+  line-height: ${({ lineHeight }) => lineHeight};
+  letter-spacing: ${({ letteSpacing }) => letteSpacing};
+  ${({ theme: { colors } }) => css`
+    color: ${colors.blue.light};
   `}
 `;

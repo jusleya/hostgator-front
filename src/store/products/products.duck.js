@@ -20,7 +20,7 @@ const getProducts = (state = INITAL_STATE) => ({
 const getProductsSuccess = (state, payload) => ({
   ...state,
   loading: false,
-  plans: payload,
+  products: payload.products.data.shared.products,
 });
 
 const getProductsError = (state = INITAL_STATE) => ({

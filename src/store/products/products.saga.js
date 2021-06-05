@@ -6,12 +6,12 @@ import api from '../../services/api';
 
 export function* getProducts() {
   try {
-    yield api({
+    const products = yield api({
       method: GET,
       url: PRICES,
     });
     // console.log(products);
-    yield put({ type: ProductsType.GET_PRODUCTS_SUCCESS });
+    yield put({ products, type: ProductsType.GET_PRODUCTS_SUCCESS });
   } catch {
     yield put({ type: ProductsType.GET_PRODUCTS_ERROR });
   }

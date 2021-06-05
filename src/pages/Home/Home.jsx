@@ -6,8 +6,8 @@ import { LayoutGrid } from '../../components/structure';
 
 const HomePage = () => {
   const dispatch = useDispatch();
-  const productsA = useSelector((state) => state.products);
-  console.log(productsA);
+  const { products } = useSelector((state) => state.productsReducer);
+  console.log(products);
 
   useEffect(() => {
     dispatch(ProductsActions.getProducts());

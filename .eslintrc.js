@@ -20,6 +20,7 @@ module.exports = {
       'after',
       { overrides: { '?': 'before', ':': 'before' } },
     ],
+    'linebreak-style': ['error', 'windows'],
   },
   settings: {
     'import/resolver': { node: { moduleDirectory: ['node_modules', 'src/'] } },

@@ -13,6 +13,8 @@ const BoxPlan = ({ name, price }) => {
   const valueSale = (value) => value * 0.40;
   const valueToMonth = (value) => value / 36;
 
+  // {real.toLocaleString('pt-br', { minimumFractionDigits: 2 })}
+
   return (
     <S.Box>
       <S.ContentBox>
@@ -39,7 +41,35 @@ const BoxPlan = ({ name, price }) => {
         </Flex>
       </S.ContentBox>
       <S.ContentBox noBorder>
-        <Title modifiers={['blue', 'center']}>Test3</Title>
+        <S.Border>
+          <Text size="16px" lineHeight="32px" modifiers={['normal']}>
+            {formatMessage({ id: 'home.box.oneSite' })}
+          </Text>
+        </S.Border>
+        <Text size="16px" lineHeight="32px" modifiers={['normal']}>
+          <b>{formatMessage({ id: 'home.box.gb' })}</b>
+          {' '}
+          {formatMessage({ id: 'home.box.storage' })}
+        </Text>
+        <S.Border>
+          <Text size="16px" lineHeight="32px" modifiers={['normal']}>
+            {formatMessage({ id: 'home.box.account' })}
+            {' '}
+            <b>{formatMessage({ id: 'home.box.unlimited' })}</b>
+          </Text>
+        </S.Border>
+        <Text size="16px" lineHeight="32px" modifiers={['normal']}>
+          {formatMessage({ id: 'home.box.create' })}
+          {' '}
+          <u><b>{formatMessage({ id: 'home.box.free' })}</b></u>
+        </Text>
+        <Text size="16px" lineHeight="32px" modifiers={['normal']}>
+          {formatMessage({ id: 'home.box.certificate' })}
+          {' '}
+          <b>{formatMessage({ id: 'home.box.free' })}</b>
+          {' '}
+          {formatMessage({ id: 'home.box.https' })}
+        </Text>
       </S.ContentBox>
     </S.Box>
   );

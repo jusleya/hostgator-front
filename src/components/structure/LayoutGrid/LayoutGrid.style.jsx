@@ -3,10 +3,11 @@ import media from 'styled-media-query';
 
 export const Grid = styled.div`
   width: 100vw;
-  height: 100vh;
   display: grid;
-  grid-template-areas: 'navbar' 'banner' 'main';
+  height: 100vh;
+  padding-bottom: 60px;
   grid-template-rows: 52px 380px auto;
+  grid-template-areas: 'navbar' 'banner' 'main';
   ${media.between('640px', '1024px')`
     grid-template-rows: 52px 400px auto;
   `}
@@ -21,8 +22,8 @@ export const Navbar = styled.section`
     background-color: ${colors.auxiliary.white};
   `}
   svg {
-    grid-area: svg;
     margin: 8px 0;
+    grid-area: svg;
   }
   ${media.between('640px', '1024px')`
     grid-template-columns: 27px auto 27px;

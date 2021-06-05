@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 // import media from 'styled-media-query';
 
 export const Box = styled.div`
-  min-width: 266px;
+  min-width: 270px;
   ${({ theme: { colors } }) => css`
     background-color: ${colors.auxiliary.white};
     border: 1px solid ${colors.auxiliary.gray};
@@ -15,4 +15,11 @@ export const ContentBox = styled.div`
     css`
       border-bottom: 1px solid ${colors.auxiliary.gray};
     `}
+`;
+
+export const Border = styled.div`
+  width: max-content;
+  ${({ theme: { colors } }) => css`
+    border-bottom: 2px dashed ${colors.auxiliary.gray};
+  `}
 `;

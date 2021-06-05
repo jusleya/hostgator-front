@@ -11,8 +11,10 @@ const MODIFIER_CONFIG = {
   lineDecoration: () => 'text-decoration: line-through;',
 };
 
-export const Text = styled.h4`
-  font-size: 13px;
+export const Text = styled.h4.attrs(({ size }) => ({
+  size: size ?? '13px',
+}))`
+  font-size: ${({ size }) => size};
   line-height: 19px;
   
   ${({ theme: { colors } }) => css`

@@ -7,7 +7,16 @@ const Slider = ({ plans }) => {
   console.log(plans);
   return (
     <S.SliderBox spaceBetween="12px">
-      {plans.map((plan) => (<Box key={plan[0].id} name={plan[0].name} />))}
+      {plans.map((plan) => {
+        const { name, id, cycle: { triennially } } = plan[0];
+        return (
+          <Box
+            key={id}
+            name={name}
+            price={triennially.priceOrder}
+          />
+        );
+      })}
     </S.SliderBox>
   );
 };

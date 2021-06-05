@@ -1,5 +1,11 @@
 {
   "home": {
-    "title": "Hostgator"
+    "title": "Hostgator",
+
+    "box": {
+      "month": "/mês*",
+      "equivalent": "equivalente a",
+      "oneYear": "1 ano de Domínio Grátis"
+    }
   }
 }

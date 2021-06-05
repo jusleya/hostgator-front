@@ -22,10 +22,6 @@ const BoxPlan = ({ titlePlan }) => (
   </S.Box>
 );
 
-// BoxPlan.defaultProps = {
-//   titlePlan: '',
-// };
-
 BoxPlan.propTypes = {
   titlePlan: PropTypes.string.isRequired,
 };

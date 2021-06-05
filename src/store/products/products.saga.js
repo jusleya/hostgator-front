@@ -10,7 +10,6 @@ export function* getProducts() {
       method: GET,
       url: PRICES,
     });
-    // console.log(products);
     yield put({ products, type: ProductsType.GET_PRODUCTS_SUCCESS });
   } catch {
     yield put({ type: ProductsType.GET_PRODUCTS_ERROR });

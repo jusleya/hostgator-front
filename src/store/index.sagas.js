@@ -1,9 +1,9 @@
 import { all } from 'redux-saga/effects';
 
-import * as productsSaga from './products/products.saga';
+import * as plansSaga from './plans/plans.saga';
 
 function* Sagas() {
-  yield all([productsSaga.watchSagas()]);
+  yield all([plansSaga.watchSagas()]);
 }
 
 export default Sagas;

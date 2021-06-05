@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 // import media from 'styled-media-query';
 
 export const Box = styled.div`
-  width: 266px;
+  min-width: 266px;
   ${({ theme: { colors } }) => css`
     background-color: ${colors.auxiliary.white};
     border: 1px solid ${colors.auxiliary.gray};

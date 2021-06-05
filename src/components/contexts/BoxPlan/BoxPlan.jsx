@@ -3,27 +3,27 @@ import PropTypes from 'prop-types';
 import { Flex, Text, Title } from '../../structure';
 import * as S from './BoxPlan.style';
 
-const BoxPlan = ({ titlePlan }) => (
+const BoxPlan = ({ name }) => (
   <S.Box>
     <S.ContentBox>
-      <Title modifiers={['blue', 'center']}>{titlePlan}</Title>
+      <Title modifiers={['blue', 'center']}>{name}</Title>
     </S.ContentBox>
     <S.ContentBox>
       <Flex spaceBetween="5px">
         <Text modifiers={['lineDecoration', 'normal']}>
-          {titlePlan}
+          Test 1
         </Text>
-        <Text modifiers={['bold']}>{titlePlan}</Text>
+        <Text modifiers={['bold']}>Test2</Text>
       </Flex>
     </S.ContentBox>
     <S.ContentBox noBorder>
-      <Title modifiers={['blue', 'center']}>{titlePlan}</Title>
+      <Title modifiers={['blue', 'center']}>Test3</Title>
     </S.ContentBox>
   </S.Box>
 );
 
 BoxPlan.propTypes = {
-  titlePlan: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default BoxPlan;

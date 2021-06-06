@@ -9,7 +9,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', 'prettier', 'react-hooks'],
+  plugins: ['react', 'prettier'],
   rules: {
     'linebreak-style': ['error', 'unix'],
     'react/jsx-props-no-spreading': 'off',

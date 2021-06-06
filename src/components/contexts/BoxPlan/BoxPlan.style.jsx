@@ -10,6 +10,9 @@ export const Box = styled.div`
     border: 1px solid ${colors.auxiliary.gray};
   `}
   ${media.greaterThan('1024px')`
+    min-width: 290px;
+  `}
+  ${media.greaterThan('1100px')`
     min-width: 330px;
     &:hover {
     ${({ theme: { colors } }) => css`

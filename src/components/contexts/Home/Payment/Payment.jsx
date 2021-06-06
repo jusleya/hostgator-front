@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import * as S from './Payment.styled';
 
 const Payment = ({ optionSelected }) => {
+  const { formatMessage } = useIntl();
   const [selectOption, setSelectOption] = useState(1);
 
   useEffect(() => {
@@ -22,7 +24,7 @@ const Payment = ({ optionSelected }) => {
           checked={selectOption === 1}
           onChange={() => setSelectOption(1)}
         />
-        <span>3 anos</span>
+        <span>{formatMessage({ id: 'home.payment.years' })}</span>
       </S.OptionContainer>
       <S.OptionContainer isChecked={selectOption === 2}>
         <S.Option
@@ -32,7 +34,7 @@ const Payment = ({ optionSelected }) => {
           name={'payment'}
           onChange={() => setSelectOption(2)}
         />
-        <span>1 ano</span>
+        <span>{formatMessage({ id: 'home.payment.year' })}</span>
       </S.OptionContainer>
       <S.OptionContainer noMargin isChecked={selectOption === 3}>
         <S.Option
@@ -42,7 +44,7 @@ const Payment = ({ optionSelected }) => {
           name={'payment'}
           onChange={() => setSelectOption(3)}
         />
-        <span>1 mês</span>
+        <span>{formatMessage({ id: 'home.payment.month' })}</span>
       </S.OptionContainer>
     </S.PaymentOptions>
   );

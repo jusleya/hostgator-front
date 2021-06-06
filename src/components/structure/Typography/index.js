@@ -2,8 +2,11 @@ import styled, { css } from 'styled-components';
 import { applyStyleModifiers } from 'styled-components-modifiers';
 
 const MODIFIER_CONFIG = {
-  blue: ({ theme }) => `
+  blueDarkest: ({ theme }) => `
     color: ${theme.colors.blue.darkest};
+  `,
+  blueDark: ({ theme }) => `
+    color: ${theme.colors.blue.dark};
   `,
   center: () => 'text-align: center;',
   bold: () => 'font-weight: bold',
@@ -11,11 +14,17 @@ const MODIFIER_CONFIG = {
   lineDecoration: () => 'text-decoration: line-through;',
 };
 
-export const Text = styled.h4.attrs(({ size, lineHeight }) => ({
+export const Text = styled.h4.attrs(({
+  size, lineHeight, textAlign, margin,
+}) => ({
   size: size ?? '13px',
   lineHeight: lineHeight ?? '19px',
+  textAlign: textAlign ?? 'left',
+  margin: margin ?? 0,
 }))`
   font-size: ${({ size }) => size};
+  margin: ${({ margin }) => margin};
+  text-align: ${({ textAlign }) => textAlign};
   line-height: ${({ lineHeight }) => lineHeight};
   
   ${({ theme: { colors } }) => css`

@@ -60,10 +60,10 @@ export const Circle = styled.div`
   svg {
     margin: -6px -8px;
   }
-  ${media.between('640px', '1023px')`
-    margin: 140px auto;
-  `}
   ${media.greaterThan('1024px')`
-    margin: 120px auto;
+    margin: 146px auto;
+  `}
+  ${media.greaterThan('1400px')`
+    margin: 180px auto;
   `}
 `;

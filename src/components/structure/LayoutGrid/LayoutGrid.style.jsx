@@ -28,7 +28,7 @@ export const Navbar = styled.section`
   ${media.between('640px', '1024px')`
     grid-template-columns: 27px auto 27px;
   `}
-  ${media.greaterThan('1024px')`
+  ${media.greaterThan('1100px')`
     grid-template-columns: 150px auto 150px;
   `}
 `;
@@ -46,7 +46,7 @@ export const Main = styled.section`
     grid-template-columns: 27px auto 27px;
   `}
   
-  ${media.greaterThan('1024px')`
+  ${media.greaterThan('1100px')`
     grid-template-columns: 150px auto 150px;
   `
 }

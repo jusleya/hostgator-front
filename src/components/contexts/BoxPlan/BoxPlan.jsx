@@ -43,7 +43,7 @@ const BoxPlan = ({ name, price, optionPay }) => {
     <S.Box>
       <S.ContentBox center>
         {imagePlan(name)}
-        <Title modifiers={['blue', 'center']}>{name}</Title>
+        <Title modifiers={['blueDarkest', 'center']}>{name}</Title>
       </S.ContentBox>
 
       <S.ContentBox center>
@@ -56,9 +56,14 @@ const BoxPlan = ({ name, price, optionPay }) => {
         <Text modifiers={['center', 'normal']}>
           {formatMessage({ id: 'home.box.equivalent' })}
         </Text>
-        <Title size="35px" mb="25px" mt="5px" modifiers={['blue', 'center']}>
-          {formatterToReal(valueToMonth(real))}
-        </Title>
+        <Flex justifyContent="center" alignItems="baseline">
+          <Title size="35px" mb="25px" mt="5px" modifiers={['blueDarkest', 'center']}>
+            {formatterToReal(valueToMonth(real))}
+          </Title>
+          <Text size="20px" modifiers={['blue', 'normal']}>
+            {formatMessage({ id: 'home.box.month' })}
+          </Text>
+        </Flex>
         <Button />
         <Flex spaceBetween="5px" alignItems="center" justifyContent="center" marginTop="31px">
           <Text size="15px" modifiers={['center', 'bold']}>
@@ -67,7 +72,7 @@ const BoxPlan = ({ name, price, optionPay }) => {
           <IcInfo />
         </Flex>
         <Flex spaceBetween="4px" alignItems="center" justifyContent="center" marginTop="9px">
-          <Text size="14px" modifiers={['blue', 'normal']}>
+          <Text size="14px" modifiers={['blueDarkest', 'normal']}>
             {formatMessage({ id: 'home.box.save' })}
             {' '}
             {formatterToReal(valueSale(real))}

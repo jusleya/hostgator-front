@@ -60,11 +60,21 @@ const BoxPlan = ({ name, price, optionPay }) => {
           {formatterToReal(valueToMonth(real))}
         </Title>
         <Button />
-        <Flex spaceBetween="5px" alignItems="center" justifyContent="center">
+        <Flex spaceBetween="5px" alignItems="center" justifyContent="center" marginTop="31px">
           <Text size="15px" modifiers={['center', 'bold']}>
             {formatMessage({ id: 'home.box.oneYear' })}
           </Text>
           <IcInfo />
+        </Flex>
+        <Flex spaceBetween="4px" alignItems="center" justifyContent="center" marginTop="9px">
+          <Text size="14px" modifiers={['blue', 'normal']}>
+            {formatMessage({ id: 'home.box.save' })}
+            {' '}
+            {formatterToReal(valueSale(real))}
+          </Text>
+          <S.SaleOff>
+            {formatMessage({ id: 'home.box.off' })}
+          </S.SaleOff>
         </Flex>
       </S.ContentBox>
 

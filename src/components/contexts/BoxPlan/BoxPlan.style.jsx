@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 
 export const Box = styled.div`
   min-width: 270px;
+  margin-top: 38px;
   ${({ theme: { colors } }) => css`
     background-color: ${colors.auxiliary.white};
     border: 1px solid ${colors.auxiliary.gray};
@@ -14,6 +15,10 @@ export const ContentBox = styled.div`
   ${({ theme: { colors }, noBorder }) => !noBorder &&
     css`
       border-bottom: 1px solid ${colors.auxiliary.gray};
+    `}
+  ${({ hasImg }) => hasImg &&
+    css`
+      text-align: center;
     `}
 `;
 

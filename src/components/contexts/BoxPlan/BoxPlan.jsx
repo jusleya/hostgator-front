@@ -3,11 +3,23 @@ import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import { Flex, Text, Title } from '../../structure';
 import { IcInfo } from '../../../assets/icons';
+import { PlanP, PlanM, PlanTurbo } from '../../../assets/images';
 import * as S from './BoxPlan.style';
 
 const BoxPlan = ({ name, price, optionPay }) => {
   const { formatMessage } = useIntl();
   const real = parseFloat(price);
+
+  const imagePlan = (value) => {
+    switch (value) {
+      case 'Plano P':
+        return <PlanP />;
+      case 'Plano M':
+        return <PlanM />;
+      default:
+        return <PlanTurbo />;
+    }
+  };
 
   const months = (value) => {
     switch (value) {
@@ -19,16 +31,17 @@ const BoxPlan = ({ name, price, optionPay }) => {
         return 1;
     }
   };
-  console.log(real / months(optionPay));
   const formatterToReal = (value) => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   const valueSale = (value) => value * 0.40;
-  const valueToMonth = (value) => value / months(optionPay);
+  const valueWithSale = (value) => value - valueSale(value);
+  const valueToMonth = (value) => valueWithSale(value) / months(optionPay);
 
   // {real.toLocaleString('pt-br', { minimumFractionDigits: 2 })}
 
   return (
     <S.Box>
-      <S.ContentBox>
+      <S.ContentBox hasImg>
+        {imagePlan(name)}
         <Title modifiers={['blue', 'center']}>{name}</Title>
       </S.ContentBox>
       <S.ContentBox>
@@ -36,7 +49,7 @@ const BoxPlan = ({ name, price, optionPay }) => {
           <Text modifiers={['lineDecoration', 'normal']}>
             {formatterToReal(real)}
           </Text>
-          <Text modifiers={['bold']}>{formatterToReal(real - valueSale(real))}</Text>
+          <Text modifiers={['bold']}>{formatterToReal(valueWithSale(real))}</Text>
         </Flex>
         <Text modifiers={['center', 'normal']}>
           {formatMessage({ id: 'home.box.equivalent' })}

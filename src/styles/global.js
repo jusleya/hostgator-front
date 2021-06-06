@@ -16,6 +16,7 @@ export default createGlobalStyle`
   body {
     height: 100%;
     ${({ theme }) => css`
+      background-color: ${theme.colors.blue.lightest};
       font-family: ${theme.typography.family.primary};
     `}
   }

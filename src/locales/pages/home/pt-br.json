@@ -1,5 +1,30 @@
 {
   "home": {
-    "title": "Hostgator"
+    "title": "Hostgator",
+    "payIn": "Quero pagar a cada",
+    "conditions": "*Confira as condições da promoção",
+
+    "payment": {
+      "years": "3 anos",
+      "year": "1 ano",
+      "month": "1 mês"
+    },
+
+    "box": {
+      "gb": "100GB",
+      "free": "Grátis",
+      "month": "/mês*",
+      "off": "40% OFF",
+      "https": "(https)",
+      "oneSite": "Para 1",
+      "save": "economize",
+      "unlimited": "Ilimitadas",
+      "create": "Criador de Sites",
+      "account": "Contas de E-mail",
+      "equivalent": "equivalente a",
+      "storage": " de Armazenamento",
+      "certificate": "Certificado SSL",
+      "oneYear": "1 ano de Domínio Grátis"
+    }
   }
 }

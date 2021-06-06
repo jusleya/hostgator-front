@@ -15,5 +15,6 @@ export const SliderBox = styled(Flex)`
   ${media.greaterThan('1100px')`
     width: auto;
     overflow-x: hidden;
+    justify-content: center;
   `}
 `;

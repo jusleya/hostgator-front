@@ -1,5 +1,6 @@
 import React from 'react';
 import { useIntl } from 'react-intl';
+import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Flex, Text, Title } from '../../structure';
 import { Button } from '../../form';
@@ -7,8 +8,11 @@ import { IcInfo } from '../../../assets/icons';
 import { PlanP, PlanM, PlanTurbo } from '../../../assets/images';
 import * as S from './BoxPlan.style';
 
-const BoxPlan = ({ name, price, optionPay }) => {
+const BoxPlan = ({
+  id, name, price, optionPay,
+}) => {
   const { formatMessage } = useIntl();
+  const history = useHistory();
   const real = parseFloat(price);
 
   const imagePlan = (value) => {
@@ -32,12 +36,21 @@ const BoxPlan = ({ name, price, optionPay }) => {
         return 1;
     }
   };
+
+  const cycle = (value) => {
+    switch (value) {
+      case 1:
+        return 'triennially';
+      case 2:
+        return 'annually';
+      default:
+        return 'monthly';
+    }
+  };
   const formatterToReal = (value) => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   const valueSale = (value) => value * 0.40;
   const valueWithSale = (value) => value - valueSale(value);
   const valueToMonth = (value) => valueWithSale(value) / months(optionPay);
-
-  // {real.toLocaleString('pt-br', { minimumFractionDigits: 2 })}
 
   return (
     <S.Box>
@@ -64,7 +77,7 @@ const BoxPlan = ({ name, price, optionPay }) => {
             {formatMessage({ id: 'home.box.month' })}
           </Text>
         </Flex>
-        <Button />
+        <Button onClick={() => history.push(`/?a=add&pid=${id}&billingcycle=${cycle(optionPay)}&promocode=PROMOHG40`)} />
         <Flex spaceBetween="5px" alignItems="center" justifyContent="center" marginTop="31px">
           <Text size="15px" modifiers={['center', 'bold']}>
             {formatMessage({ id: 'home.box.oneYear' })}
@@ -119,6 +132,7 @@ const BoxPlan = ({ name, price, optionPay }) => {
 };
 
 BoxPlan.propTypes = {
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   optionPay: PropTypes.number.isRequired,

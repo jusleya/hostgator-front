@@ -4,7 +4,7 @@ import Box from '../../BoxPlan';
 import * as S from './Slider.styled';
 
 const Slider = ({ plans, optionPay }) => (
-  <S.SliderBox justifyContent="center" spaceBetween="12px">
+  <S.SliderBox spaceBetween="12px">
     {plans.map((plan) => {
       const { name, id, cycle: { triennially, annually, monthly } } = plan[0];
       const typePayment = (value) => {
@@ -21,6 +21,7 @@ const Slider = ({ plans, optionPay }) => (
       return (
         <Box
           key={id}
+          id={id}
           name={name}
           optionPay={optionPay}
           price={typePayment(optionPay).priceOrder}

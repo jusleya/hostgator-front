@@ -5,13 +5,24 @@ import { Flex, Text, Title } from '../../structure';
 import { IcInfo } from '../../../assets/icons';
 import * as S from './BoxPlan.style';
 
-const BoxPlan = ({ name, price }) => {
+const BoxPlan = ({ name, price, optionPay }) => {
   const { formatMessage } = useIntl();
   const real = parseFloat(price);
 
+  const months = (value) => {
+    switch (value) {
+      case 1:
+        return 36;
+      case 2:
+        return 12;
+      default:
+        return 1;
+    }
+  };
+  console.log(real / months(optionPay));
   const formatterToReal = (value) => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   const valueSale = (value) => value * 0.40;
-  const valueToMonth = (value) => value / 36;
+  const valueToMonth = (value) => value / months(optionPay);
 
   // {real.toLocaleString('pt-br', { minimumFractionDigits: 2 })}
 
@@ -78,6 +89,7 @@ const BoxPlan = ({ name, price }) => {
 BoxPlan.propTypes = {
   name: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
+  optionPay: PropTypes.number.isRequired,
 };
 
 export default BoxPlan;

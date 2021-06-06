@@ -1,4 +1,4 @@
-export const base = `${process.env.REACT_APP_API_BASE_PATH}`;
+export const base = 'https://2891637c-8ab7-4a84-906b-a98465726f85.mock.pstmn.io';
 
 export const baseURL = `${base}`;
 

@@ -7,5 +7,8 @@
       "controlPanel": "Painel de Controle cPanel",
       "available": "99,9% de disponibilidade: seu site sempre no ar"
     }
+  },
+  "button": {
+    "hire": "Contrate Agora"
   }
 }

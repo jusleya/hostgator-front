@@ -2,6 +2,7 @@ import React from 'react';
 import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import { Flex, Text, Title } from '../../structure';
+import { Button } from '../../form';
 import { IcInfo } from '../../../assets/icons';
 import { PlanP, PlanM, PlanTurbo } from '../../../assets/images';
 import * as S from './BoxPlan.style';
@@ -44,6 +45,7 @@ const BoxPlan = ({ name, price, optionPay }) => {
         {imagePlan(name)}
         <Title modifiers={['blue', 'center']}>{name}</Title>
       </S.ContentBox>
+
       <S.ContentBox>
         <Flex spaceBetween="5px" justifyContent="center">
           <Text modifiers={['lineDecoration', 'normal']}>
@@ -57,6 +59,7 @@ const BoxPlan = ({ name, price, optionPay }) => {
         <Title size="35px" mb="25px" mt="5px" modifiers={['blue', 'center']}>
           {formatterToReal(valueToMonth(real))}
         </Title>
+        <Button />
         <Flex spaceBetween="5px" alignItems="center" justifyContent="center">
           <Text size="15px" modifiers={['center', 'bold']}>
             {formatMessage({ id: 'home.box.oneYear' })}
@@ -64,6 +67,7 @@ const BoxPlan = ({ name, price, optionPay }) => {
           <IcInfo />
         </Flex>
       </S.ContentBox>
+
       <S.ContentBox noBorder>
         <S.Border>
           <Text size="16px" lineHeight="32px" modifiers={['normal']}>

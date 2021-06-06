@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+## Solução
+Este projeto é referente ao teste técnico para vaga de Front-end da empresa Hostgator. Foi proposta a implementação de uma aplicação client-side, que faça uma consulta a API para obter os preços e nome de determinados planos.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Para implementação do projeto foi utilizado: ReactJs, Redux, Styled-components, Redux-saga, Redux-sauce, Duck Pattern, HTML e CSS. NPM e YARN foram empregados para execução e instalação de bibliotecas necessárias.
 
-## Available Scripts
+Existem três pastas principais no projeto:
+- assets, encontram-se as imagens e fontes utilizadas;
+- components, encontram-se os components utilizados divididos em 3 pastas: contexts (componentes encontrados nas pages), form (componentes destinados a formulários) e structure (componentes destinados a estrutura do site);
+- constants, foram declaradas as principais constantes utilizadas;
+- lib e providers, configurações aplicadas para execução do projeto;
+- locales, destinada a importação de JSON com os principais textos;
+- pages, códigos destinados as telas;
+- services, configuração de conexão com a API;
+- store, códigos de requisição;
+- styles, estilos globais e tema do sistema.
 
-In the project directory, you can run:
 
-### `yarn start`
+## Organização
+```
+├── src
+│   ├── assets
+│   │   └── fonts
+│   │   └── icons
+│   │   └── images
+│   ├── components
+│   │   └── contexts
+│   │   └── form
+│   │   └── structure
+│   ├── constants
+│   ├── lib
+│   │   └── core
+│   ├── locales
+│   │   └── core
+│   │   └── pages
+│   ├── pages
+│   │   └── Home
+│   ├── providers
+│   ├── services
+│   ├── store
+│   │   └── plans
+│   ├── styles
+│   │   └── tokens
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Para Execução do Projeto
 
-### `yarn test`
+``` bash
+# Instalar as dependências
+yarn
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Execução [http://localhost:3000](http://localhost:3000)
+yarn start
 
-### `yarn build`
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Bibliotecas utilizadas
+Esta aplicação utiliza:
+- ReactJs (para construir a interface do app);
+- react-router-dom (auxilia na construção das rotas);
+- Bulma (framework utilizada para interface);
+- Axios (para conexão com a API).

@@ -8,7 +8,7 @@ export const Banner = styled.section`
   grid-template-areas: '. content .';
   grid-template-columns: 15px auto 15px;
   ${({ theme: { colors } }) => css`
-    background-color: ${colors.blue.dark};
+    background-color: ${colors.blue.darkest};
   `}
   ${media.between('640px', '1024px')`
     grid-template-columns: 27px auto 27px;
@@ -25,7 +25,7 @@ export const Circle = styled.div`
   margin: 36px auto;
   border-radius: 50%;
   ${({ theme: { colors } }) => css`
-    background-color: ${colors.blue.default};
+    background-color: ${colors.blue.dark};
   `}
   svg {
     margin: -6px -8px;

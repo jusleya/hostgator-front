@@ -3,7 +3,7 @@ import { applyStyleModifiers } from 'styled-components-modifiers';
 
 const MODIFIER_CONFIG = {
   blue: ({ theme }) => `
-    color: ${theme.colors.blue.dark};
+    color: ${theme.colors.blue.darkest};
   `,
   center: () => 'text-align: center;',
   bold: () => 'font-weight: bold',

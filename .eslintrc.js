@@ -16,7 +16,7 @@ module.exports = {
   },
   plugins: ['react', 'prettier'],
   rules: {
-    'linebreak-style': ['error', 'windows'],
+    'linebreak-style': ['error', 'unix'],
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-curly-brace-presence': 'off',
     'import/prefer-default-export': 'off',

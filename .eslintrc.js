@@ -14,6 +14,7 @@ module.exports = {
     'linebreak-style': ['error', 'unix'],
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-curly-brace-presence': 'off',
+    'react/jsx-one-expression-per-line': 'off',
     'import/prefer-default-export': 'off',
     'arrow-body-style': ['warn', 'as-needed'],
     'operator-linebreak': [

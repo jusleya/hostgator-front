@@ -23,26 +23,23 @@ export const OptionContainer = styled.label`
   span {
     display: block;
   }
-  ${({ noMargin }) =>
-    !noMargin &&
+  ${({ noMargin }) => !noMargin &&
     css`
       margin-right: 15px;
     `}
-  ${({ theme, isChecked, noMargin }) =>
-    isChecked && !noMargin
-      ? css`
+  ${({ theme, isChecked, noMargin }) => (isChecked && !noMargin ? css`
           border-radius: 21px;
           padding: 12px 12px 10px 10px;
           margin: -12px 2px -11px -12px;
           background-color: ${theme.colors.blue.dark};
         `
-      : isChecked &&
+    : isChecked &&
         css`
           border-radius: 21px;
           padding: 12px 14px 10px 9px;
           margin: -12px -13px -11px -9px;
           background-color: ${theme.colors.blue.dark};
-        `}
+        `)}
 `;
 
 export const Option = styled.input`

@@ -11,6 +11,12 @@ export const Box = styled.div`
   `}
   ${media.greaterThan('1024px')`
     min-width: 330px;
+    &:hover {
+    ${({ theme: { colors } }) => css`
+      border-top: 12px solid ${colors.auxiliary.orange};
+      border-bottom: 3px solid ${colors.auxiliary.orange};
+    `}
+    }
   `}
 `;
 

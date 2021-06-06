@@ -1,12 +1,11 @@
 import styled, { css } from 'styled-components';
-// import { Flex } from '../../../structure';
+// import media from 'styled-media-query';
 
 export const PaymentOptions = styled.div`
   width: 290px;
   display: flex;
   margin: 7px auto;
   padding: 11px 12px;
-  /* width: max-content; */
   border-radius: 21px;
   flex-direction: row;
   box-shadow: 0px 2px 4px #4480C570;
@@ -25,7 +24,6 @@ export const OptionContainer = styled.label`
     display: block;
   }
   ${({ noMargin }) => !noMargin && css`
-    /* margin-right: 23px; */
     margin-right: 15px;
   `}
   ${({ theme, isChecked, noMargin }) => ((isChecked && !noMargin)
@@ -33,18 +31,12 @@ export const OptionContainer = styled.label`
       border-radius: 21px;
       padding: 12px 12px 10px 10px;
       margin: -12px 2px -11px -12px;
-      /* border-radius: 21px;
-      padding: 11px 12px 11px 14px;
-      margin: -11px 9px -11px -12px; */
       background-color: ${theme.colors.blue.dark};
     `
     : (isChecked) && css`
       border-radius: 21px;
       padding: 12px 14px 10px 9px;
       margin: -12px -13px -11px -9px;
-      /* border-radius: 21px; */
-      /* padding: 11px 16px 11px 11px;
-      margin: -11px -13px -11px -12px; */
       background-color: ${theme.colors.blue.dark};
   `)}
 `;

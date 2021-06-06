@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
+import media from 'styled-media-query';
 import { Text } from '../../structure';
-// import media from 'styled-media-query';
 
 export const Box = styled.div`
   min-width: 270px;
@@ -8,6 +8,9 @@ export const Box = styled.div`
   ${({ theme: { colors } }) => css`
     background-color: ${colors.auxiliary.white};
     border: 1px solid ${colors.auxiliary.gray};
+  `}
+  ${media.greaterThan('1024px')`
+    min-width: 330px;
   `}
 `;
 
@@ -17,7 +20,7 @@ export const ContentBox = styled.div`
     css`
       border-bottom: 1px solid ${colors.auxiliary.gray};
     `}
-  ${({ hasImg }) => hasImg &&
+  ${({ center }) => center &&
     css`
       text-align: center;
     `}

@@ -39,6 +39,7 @@ export const Flex = styled.div.attrs(
   align-items: ${({ alignItems }) => alignItems};
   margin-left: ${({ marginLeft }) => marginLeft};
   flex-direction: ${({ direction }) => direction};
+  flex-wrap: ${({ flexWrap }) => flexWrap};
   margin-right: ${({ marginRight }) => marginRight};
   ${({ margin }) => margin && `margin: ${margin};`};
   margin-bottom: ${({ marginBottom }) => marginBottom};

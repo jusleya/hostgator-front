@@ -41,12 +41,12 @@ const BoxPlan = ({ name, price, optionPay }) => {
 
   return (
     <S.Box>
-      <S.ContentBox hasImg>
+      <S.ContentBox center>
         {imagePlan(name)}
         <Title modifiers={['blue', 'center']}>{name}</Title>
       </S.ContentBox>
 
-      <S.ContentBox>
+      <S.ContentBox center>
         <Flex spaceBetween="5px" justifyContent="center">
           <Text modifiers={['lineDecoration', 'normal']}>
             {formatterToReal(real)}

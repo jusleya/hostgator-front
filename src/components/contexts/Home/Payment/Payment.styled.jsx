@@ -57,9 +57,8 @@ export const Option = styled.input`
   :checked {
     ${({ theme: { colors } }) => css`
       border-color: ${colors.auxiliary.white};
-      background-color:  ${colors.auxiliary.white};
+      background: radial-gradient(#fff 50%, rgba(0, 0, 0, 0) 51%);
     `}
-  }
   :checked+span {
     ${({ theme: { colors } }) => css`
       color: ${colors.auxiliary.white};

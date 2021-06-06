@@ -1,3 +1,4 @@
+// prettier-ignore
 export const flattenMessages = (nestedMessages, prefix = '') => Object.keys(nestedMessages).reduce((messages, key) => {
   const value = nestedMessages[key];
 

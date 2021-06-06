@@ -1,3 +1,4 @@
+// prettier-ignore
 import React from 'react';
 import { useIntl } from 'react-intl';
 import { useHistory } from 'react-router-dom';
@@ -9,7 +10,7 @@ import { PlanP, PlanM, PlanTurbo } from '../../../assets/images';
 import * as S from './BoxPlan.style';
 
 const BoxPlan = ({
-  id, name, price, optionPay,
+ id, name, price, optionPay 
 }) => {
   const { formatMessage } = useIntl();
   const history = useHistory();
@@ -48,7 +49,8 @@ const BoxPlan = ({
     }
   };
 
-  const formatterToReal = (value) => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  const formatterToReal = (value) =>
+    value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   const valueSale = (value) => value * 0.4;
   const valueWithSale = (value) => value - valueSale(value);
   const valueToMonth = (value) => valueWithSale(value) / months(optionPay);
@@ -87,9 +89,13 @@ const BoxPlan = ({
         </Flex>
 
         <Button
-          onClick={() => history.push(
-            `/?a=add&pid=${id}&billingcycle=${cycle(optionPay)}&promocode=PROMOHG40`,
-          )}
+          onClick={() =>
+            history.push(
+            `/?a=add&pid=${id}&billingcycle=${cycle(
+              optionPay,
+            )}&promocode=PROMOHG40`,
+          )
+          }
         />
         <Flex
           spaceBetween="5px"
@@ -109,8 +115,7 @@ const BoxPlan = ({
           marginTop="9px"
         >
           <Text size="14px" modifiers={['blueDarkest', 'normal']}>
-            {formatMessage({ id: 'home.box.save' })}
-            {' '}
+            {formatMessage({ id: 'home.box.save' })}{' '}
             {formatterToReal(valueSale(real))}
           </Text>
           <S.SaleOff>{formatMessage({ id: 'home.box.off' })}</S.SaleOff>
@@ -124,29 +129,24 @@ const BoxPlan = ({
           </Text>
         </S.Border>
         <Text size="16px" lineHeight="32px" modifiers={['normal']}>
-          <b>{formatMessage({ id: 'home.box.gb' })}</b>
-          {' '}
+          <b>{formatMessage({ id: 'home.box.gb' })}</b>{' '}
           {formatMessage({ id: 'home.box.storage' })}
         </Text>
         <S.Border>
           <Text size="16px" lineHeight="32px" modifiers={['normal']}>
-            {formatMessage({ id: 'home.box.account' })}
-            {' '}
+            {formatMessage({ id: 'home.box.account' })}{' '}
             <b>{formatMessage({ id: 'home.box.unlimited' })}</b>
           </Text>
         </S.Border>
         <Text size="16px" lineHeight="32px" modifiers={['normal']}>
-          {formatMessage({ id: 'home.box.create' })}
-          {' '}
+          {formatMessage({ id: 'home.box.create' })}{' '}
           <u>
             <b>{formatMessage({ id: 'home.box.free' })}</b>
           </u>
         </Text>
         <Text size="16px" lineHeight="32px" modifiers={['normal']}>
-          {formatMessage({ id: 'home.box.certificate' })}
-          {' '}
-          <b>{formatMessage({ id: 'home.box.free' })}</b>
-          {' '}
+          {formatMessage({ id: 'home.box.certificate' })}{' '}
+          <b>{formatMessage({ id: 'home.box.free' })}</b>{' '}
           {formatMessage({ id: 'home.box.https' })}
         </Text>
       </S.ContentBox>

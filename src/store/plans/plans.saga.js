@@ -1,3 +1,4 @@
+// prettier-ignore
 import { takeLatest, put } from 'redux-saga/effects';
 import { PlansType } from './plans.duck';
 import { GET } from '../../constants/verbs';
@@ -13,7 +14,10 @@ export function* getPlans() {
     const obj = productsOBJ.data.shared.products;
     const products = Object.keys(obj).map((product) => [obj[product]]);
     const plans = products.filter(
-      (product) => product[0].name === 'Plano P' || product[0].name === 'Plano M' || product[0].name === 'Plano Turbo',
+      (product) =>
+        product[0].name === 'Plano P' ||
+        product[0].name === 'Plano M' ||
+        product[0].name === 'Plano Turbo',
     );
 
     yield put({ plans, type: PlansType.GET_PLANS_SUCCESS });

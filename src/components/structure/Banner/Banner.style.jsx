@@ -26,7 +26,7 @@ export const ImageLeft = styled.div`
     width: 375px;
     margin-top: 34px;
   }
-  
+
   ${media.greaterThan('1025px')`
     display: block;
   `}
@@ -39,7 +39,7 @@ export const ImageRight = styled.div`
     width: 280px;
     margin-top: 58px;
   }
-  
+
   ${media.greaterThan('1025px')`
     display: block;
   `}

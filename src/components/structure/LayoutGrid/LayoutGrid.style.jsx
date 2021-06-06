@@ -45,9 +45,8 @@ export const Main = styled.section`
   ${media.between('640px', '1024px')`
     grid-template-columns: 27px auto 27px;
   `}
-  
+
   ${media.greaterThan('1100px')`
     grid-template-columns: 150px auto 150px;
-  `
-}
+  `}
 `;

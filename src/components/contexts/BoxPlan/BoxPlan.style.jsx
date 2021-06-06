@@ -25,11 +25,13 @@ export const Box = styled.div`
 
 export const ContentBox = styled.div`
   padding: 33px 16px 26px 16px;
-  ${({ theme: { colors }, noBorder }) => !noBorder &&
+  ${({ theme: { colors }, noBorder }) =>
+    !noBorder &&
     css`
       border-bottom: 1px solid ${colors.auxiliary.gray};
     `}
-  ${({ center }) => center &&
+  ${({ center }) =>
+    center &&
     css`
       text-align: center;
     `}

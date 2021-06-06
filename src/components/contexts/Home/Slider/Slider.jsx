@@ -6,7 +6,11 @@ import * as S from './Slider.styled';
 const Slider = ({ plans, optionPay }) => (
   <S.SliderBox spaceBetween="12px">
     {plans.map((plan) => {
-      const { name, id, cycle: { triennially, annually, monthly } } = plan[0];
+      const {
+        name,
+        id,
+        cycle: { triennially, annually, monthly },
+      } = plan[0];
       const typePayment = (value) => {
         switch (value) {
           case 1:

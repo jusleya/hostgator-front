@@ -3,7 +3,12 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['plugin:react/recommended', 'prettier', 'airbnb', 'plugin:prettier/recommended'],
+  extends: [
+    'plugin:react/recommended',
+    'prettier',
+    'airbnb',
+    'plugin:prettier/recommended',
+  ],
   parserOptions: {
     ecmaFeatures: { jsx: true },
     ecmaVersion: 12,
@@ -11,7 +16,7 @@ module.exports = {
   },
   plugins: ['react', 'prettier'],
   rules: {
-    'linebreak-style': ['error', 'unix'],
+    'linebreak-style': ['error', 'windows'],
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-curly-brace-presence': 'off',
     'import/prefer-default-export': 'off',
@@ -20,6 +25,12 @@ module.exports = {
       'error',
       'after',
       { overrides: { '?': 'before', ':': 'before' } },
+    ],
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
     ],
   },
   settings: {

@@ -6,5 +6,6 @@
   "singleQuote": true,
   "semi": true,
   "bracketSpacing": true,
-  "printWidth": 80
+  "printWidth": 80,
+  "endOfLine":"auto"
 }

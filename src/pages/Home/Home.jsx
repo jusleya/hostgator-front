@@ -19,12 +19,23 @@ const HomePage = () => {
 
   return (
     <LayoutGrid>
-      <Text size="14px" textAlign="center" modifiers={['blueDarkest', 'normal']}>
+      <Text
+        size="14px"
+        textAlign="center"
+        modifiers={['blueDarkest', 'normal']}
+      >
         {formatMessage({ id: 'home.payIn' })}
       </Text>
-      <RadioButton optionSelected={(selectOption) => setOptionPay(selectOption)} />
+      <RadioButton
+        optionSelected={(selectOption) => setOptionPay(selectOption)}
+      />
       <Slider plans={plans} optionPay={optionPay} />
-      <Text size="12px" margin="6px 0 20px 0" textAlign="center" modifiers={['blueDark', 'normal']}>
+      <Text
+        size="12px"
+        margin="6px 0 20px 0"
+        textAlign="center"
+        modifiers={['blueDark', 'normal']}
+      >
         <u>{formatMessage({ id: 'home.conditions' })}</u>
       </Text>
     </LayoutGrid>

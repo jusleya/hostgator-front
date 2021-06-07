@@ -1,4 +1,4 @@
-// prettier-ignore
+// prettier-ignore-start
 import React from 'react';
 import { useIntl } from 'react-intl';
 import { useHistory } from 'react-router-dom';
@@ -164,3 +164,4 @@ BoxPlan.propTypes = {
 };
 
 export default BoxPlan;
+// prettier-ignore-end

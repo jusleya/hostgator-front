@@ -1,21 +1,20 @@
-## Solução
-Este projeto é referente ao teste técnico para vaga de Front-end da empresa Hostgator. Foi proposta a implementação de uma aplicação client-side, que faça uma consulta a API para obter os preços e nome de determinados planos.
+## Solution
+This project is related to the technical test of selection process for the Hostgator company's front-end. The challenge was to implement a client-side application, which makes an API query to obtain the prices and names of certain plans.
 
-Para implementação do projeto foi utilizado: ReactJs, Redux, Styled-components, Redux-saga, Redux-sauce, Duck Pattern, HTML e CSS. NPM e YARN foram empregados para execução e instalação de bibliotecas necessárias.
+To implement the project were used: ReactJs, Redux, Styled-components, Redux-saga, Redux-sauce, Duck Pattern, JavaScript, HTML and CSS. NPM and YARN were employed to run and install the necessary libraries.
 
-Existem três pastas principais no projeto:
-- assets, encontram-se as imagens e fontes utilizadas;
-- components, encontram-se os components utilizados divididos em 3 pastas: contexts (componentes encontrados nas pages), form (componentes destinados a formulários) e structure (componentes destinados a estrutura do site);
-- constants, foram declaradas as principais constantes utilizadas;
-- lib e providers, configurações aplicadas para execução do projeto;
-- locales, destinada a importação de JSON com os principais textos;
-- pages, códigos destinados as telas;
-- services, configuração de conexão com a API;
-- store, códigos de requisição;
-- styles, estilos globais e tema do sistema.
+The project consists of nine folders:
+- assets, the images and fonts used;
+- components, the components used are divided into 3 folders: contexts (components found on pages), form (components for forms) and structure (components for the structure of the site);
+- constants, the constants that were declared;
+- lib and providers, settings applied for project execution;
+- locales, import JSON with the main texts;
+- pages, codes for screens;
+- services, API connection configuration;
+- store, requisition codes;
+- styles, global styles and system theme.
 
-
-## Organização
+## Organization
 ```
 ├── src
 │   ├── assets
@@ -43,20 +42,23 @@ Existem três pastas principais no projeto:
 
 ```
 
-## Para Execução do Projeto
+## Execution
 
 ``` bash
-# Instalar as dependências
+# Install dependencies
 yarn
 
-# Execução [http://localhost:3000](http://localhost:3000)
+# Execution [http://localhost:3000](http://localhost:3000)
 yarn start
 
 ```
 
-## Bibliotecas utilizadas
-Esta aplicação utiliza:
-- ReactJs (para construir a interface do app);
-- react-router-dom (auxilia na construção das rotas);
-- Bulma (framework utilizada para interface);
-- Axios (para conexão com a API).
+## Libraries
+- ReactJs;
+- Redux;
+- redux-saga;
+- reduxsauce;
+- react-router-dom;
+- PrpTypes;
+- Styled-components;
+- Axios;

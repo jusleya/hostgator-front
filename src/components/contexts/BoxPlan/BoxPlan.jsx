@@ -9,9 +9,7 @@ import { IcInfo } from '../../../assets/icons';
 import { PlanP, PlanM, PlanTurbo } from '../../../assets/images';
 import * as S from './BoxPlan.style';
 
-const BoxPlan = ({
- id, name, price, optionPay 
-}) => {
+const BoxPlan = ({ id, name, price, optionPay }) => {
   const { formatMessage } = useIntl();
   const history = useHistory();
   const real = parseFloat(price);
@@ -91,10 +89,10 @@ const BoxPlan = ({
         <Button
           onClick={() =>
             history.push(
-            `/?a=add&pid=${id}&billingcycle=${cycle(
-              optionPay,
-            )}&promocode=PROMOHG40`,
-          )
+              `/?a=add&pid=${id}&billingcycle=${cycle(
+                optionPay,
+              )}&promocode=PROMOHG40`,
+            )
           }
         />
         <Flex

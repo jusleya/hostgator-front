@@ -16,9 +16,7 @@ const MODIFIER_CONFIG = {
 };
 
 export const Text = styled.h4.attrs(
-  ({
- size, lineHeight, textAlign, margin 
-}) => ({
+  ({ size, lineHeight, textAlign, margin }) => ({
     size: size ?? '13px',
     lineHeight: lineHeight ?? '19px',
     textAlign: textAlign ?? 'left',
@@ -54,9 +52,7 @@ export const Title = styled.h1.attrs(({ size, mb, mt }) => ({
 `;
 
 export const Subtitle = styled.h3.attrs(
-  ({
- width, lineHeight, fontWeigth, letteSpacing 
-}) => ({
+  ({ width, lineHeight, fontWeigth, letteSpacing }) => ({
     width: width ?? 'auto',
     fontWeigth: fontWeigth ?? 600,
     lineHeight: lineHeight ?? '27px',

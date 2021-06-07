@@ -52,7 +52,9 @@ export const Title = styled.h1.attrs(({ size, mb, mt }) => ({
 `;
 
 export const Subtitle = styled.h3.attrs(
-  ({ width, lineHeight, fontWeigth, letteSpacing }) => ({
+  ({
+ width, lineHeight, fontWeigth, letteSpacing 
+}) => ({
     width: width ?? 'auto',
     fontWeigth: fontWeigth ?? 600,
     lineHeight: lineHeight ?? '27px',

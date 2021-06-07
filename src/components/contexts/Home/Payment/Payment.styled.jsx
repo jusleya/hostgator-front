@@ -28,7 +28,7 @@ export const OptionContainer = styled.label`
     css`
       margin-right: 15px;
     `}
-  ${({ theme, isChecked, noMargin }) => (isChecked && !noMargin
+  ${({ theme, isChecked, noMargin }) => isChecked && !noMargin
       ? css`
           border-radius: 21px;
           padding: 12px 12px 10px 10px;

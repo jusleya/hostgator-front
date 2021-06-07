@@ -9,7 +9,12 @@ import { IcInfo } from '../../../assets/icons';
 import { PlanP, PlanM, PlanTurbo } from '../../../assets/images';
 import * as S from './BoxPlan.style';
 
-const BoxPlan = ({ id, name, price, optionPay }) => {
+const BoxPlan = ({ 
+  id,
+  name,
+  price,
+  optionPay
+ }) => {
   const { formatMessage } = useIntl();
   const history = useHistory();
   const real = parseFloat(price);
@@ -46,12 +51,9 @@ const BoxPlan = ({ id, name, price, optionPay }) => {
         return 'monthly';
     }
   };
-
   const formatterToReal = (value) =>
     value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-  
   const valueSale = (value) => value * 0.4;
-  
   const valueWithSale = (value) => value - valueSale(value);
   
   const valueToMonth = (value) => valueWithSale(value) / months(optionPay);
@@ -89,9 +91,12 @@ const BoxPlan = ({ id, name, price, optionPay }) => {
           </Text>
         </Flex>
 
-        <Button
-          onClick={() =>
-            history.push(`/?a=add&pid=${id}&billingcycle=${cycle(optionPay,)}&promocode=PROMOHG40`)
+        <Button onClick={() =>
+            history.push(`
+              /?a=add&pid=${id}&billingcycle=${cycle(
+              optionPay
+              )}&promocode=PROMOHG40
+            `)
           }
         />
         <Flex

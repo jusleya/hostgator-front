@@ -1,4 +1,4 @@
-// prettier-ignore
+// prettier-ignore-start
 import React from 'react';
 import { useIntl } from 'react-intl';
 import { useHistory } from 'react-router-dom';
@@ -46,11 +46,11 @@ const BoxPlan = ({ id, name, price, optionPay }) => {
         return 'monthly';
     }
   };
-
   const formatterToReal = (value) =>
     value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   const valueSale = (value) => value * 0.4;
   const valueWithSale = (value) => value - valueSale(value);
+  
   const valueToMonth = (value) => valueWithSale(value) / months(optionPay);
 
   return (
@@ -86,6 +86,7 @@ const BoxPlan = ({ id, name, price, optionPay }) => {
           </Text>
         </Flex>
 
+<<<<<<< HEAD
         <Button
           onClick={() =>
             history.push(
@@ -93,6 +94,14 @@ const BoxPlan = ({ id, name, price, optionPay }) => {
                 optionPay,
               )}&promocode=PROMOHG40`,
             )
+=======
+        <Button onClick={() =>
+            history.push(`
+              /?a=add&pid=${id}&billingcycle=${cycle(
+              optionPay
+              )}&promocode=PROMOHG40
+            `)
+>>>>>>> ed0dc59c1008572c8d0890aca04ecca474ffe4af
           }
         />
         <Flex
@@ -160,3 +169,4 @@ BoxPlan.propTypes = {
 };
 
 export default BoxPlan;
+// prettier-ignore-end

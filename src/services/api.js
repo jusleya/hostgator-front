@@ -6,8 +6,6 @@ const API = axios.create({
 });
 API.interceptors.response.use(
   (response) => response,
-  (error) => (error.response.status === 401
-    ? console.log(error)
-    : Promise.reject(error)),
+  (error) => (error.response.status === 401 && Promise.reject(error)),
 );
 export default API;
